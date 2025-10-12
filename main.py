@@ -46,7 +46,7 @@ class MoodCamApp:
     def __init__(self, root):
         self.root = root
         self.root.title("MoodCam (Smooth ViT)")
-        self.root.geometry("700x580")
+        self.root.geometry("800x620")
         self.root.configure(bg="#ececec")
 
         # ====== Pages ======
@@ -112,7 +112,7 @@ class MoodCamApp:
         self.running = False
         self.prediction_running = False
         self.last_prediction = "Analyzing..."
-        self.analysis_interval = 1.0  # seconds
+        self.analysis_interval = 1.0
 
         # Start background prediction thread
         self.prediction_thread = threading.Thread(target=self.prediction_loop, daemon=True)
